@@ -1,5 +1,5 @@
 {:paths ["src"]
- :deps {com.junkawasaki/multiformats-clj {:local/root "../../com-junkawasaki/multiformats-clj"}}
+ :deps {io.github.kotoba-lang/io-multiformats {:local/root "../../kotoba-lang/io-multiformats"}}
  :aliases
  {:test {:extra-paths ["test"]
          :extra-deps {io.github.cognitect-labs/test-runner
