@@ -1,3 +1,3 @@
-{:west/project "orgs/etzhayyim/com-etzhayyim-tanemaki"
+{:west/project "orgs/etzhayyim/actor-tanemaki"
  :root {:path "root" :revision "ae6832f7ed09147a18b0416de18b44b00c95562a"}
  :dependencies [{:name "io-multiformats" :path "orgs/kotoba-lang/io-multiformats" :revision "310724803db65840f00d2d98d7887f2b6a512bd3"}]}

@@ -1,1 +1,1 @@
-{:repository/id "etzhayyim/com-etzhayyim-tanemaki" :actor/id "tanemaki" :canonical-format :edn}
+{:repository/id "etzhayyim/actor-tanemaki" :actor/id "tanemaki" :canonical-format :edn}

@@ -1,4 +1,4 @@
-{:did        "did:web:etzhayyim.github.io:com-etzhayyim-tanemaki"
+{:did        "did:web:etzhayyim.com:actor:tanemaki"
  :handle     "tanemaki.etzhayyim.com"
  :ipns-key   "tanemaki-actor"
  :graph-type "com.etzhayyim.tanemaki.graph"
