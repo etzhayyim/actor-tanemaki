@@ -14,7 +14,7 @@
   pytest try/except AssertionError + raise SystemExit on the no-raise path → (is (thrown? …)).
   The __main__ runner is intentionally omitted."
   (:require [clojure.test :refer [deftest is testing run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [tanemaki.methods.analyze :as analyze]
             [tanemaki.methods.propose :as propose]

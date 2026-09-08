@@ -11,7 +11,7 @@
 
   The __main__ runner is intentionally omitted."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [cheshire.core :as json]
             [tanemaki.methods.analyze :as analyze]
