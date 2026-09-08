@@ -17,7 +17,7 @@
   tanemaki.methods.analyze/load-graph preserves that first-touch node order via ::order metadata
   on the :nodes map, so this ns walks nodes in EDN read order. The DERIVED block walks
   `sorted(res[\"orgs\"])` — a plain alphabetical sort of the org ids."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [tanemaki.methods.analyze :as analyze]
             #?(:clj [clojure.java.io :as io])))
 

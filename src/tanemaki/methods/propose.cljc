@@ -20,7 +20,7 @@
   Pure fns; reuses tanemaki.methods.analyze (recommend-route / criteria) + tanemaki.methods.cid
   (cidv1-raw / sha256-hex). House style: Python ':…' keyword strings stay strings; assert →
   throw ex-info (assertRaises → thrown?). The __main__/main CLI demo is intentionally omitted."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [tanemaki.methods.analyze :as analyze]
             [tanemaki.methods.cid :as cid]))
 

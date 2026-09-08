@@ -12,7 +12,7 @@
   test (only exercised incidentally by test_propose). A drift in either silently breaks a voter's
   ability to verify a grant scorecard."
   (:require [tanemaki.methods.cid :as cid]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.test :refer [deftest is run-tests]]))
 
 (defn- cid-of [s] (cid/cidv1-raw (cid/utf8-bytes s)))

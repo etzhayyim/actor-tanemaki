@@ -7,7 +7,7 @@
       weights) and flags every derived readout :derived / :bond/is-transient (G3/G4)
     - emit is deterministic (repeat-emit on a re-loaded seed is byte-identical)"
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [tanemaki.methods.analyze :as analyze]
             [tanemaki.methods.datom-emit :as datom-emit]))

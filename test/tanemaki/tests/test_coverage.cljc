@@ -2,7 +2,7 @@
   "tanemaki 種蒔き — coverage-report integrity tests (ADR-2606122001).
   1:1 Clojure port of tests/test_coverage.py."
   (:require [clojure.test :refer [deftest is run-tests]]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [clojure.java.io :as io]
             [tanemaki.methods.analyze :as analyze]
             [tanemaki.methods.coverage-report :as coverage]))

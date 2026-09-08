@@ -23,7 +23,7 @@
   appends to a local file. G1: tanemaki is a STEWARD, never a sovereign — the ledger is a
   PUBLIC DD scorecard trail; every grant is decided by 1 SBT = 1 vote, never by this ledger.
   G2: the fund GIVES, never INVESTS — equity/debt/convertible instruments are unrepresentable."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             #?(:clj [clojure.java.io :as io])))
 
 (defn add [entity attr value] [":db/add" entity attr value])

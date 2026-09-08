@@ -14,7 +14,7 @@
   edges content-stable → resume-safe. IDEMPOTENT-BY-CONTENT: a beat whose ground datoms equal the
   previous beat's is a NO-OP. No-server-key: appends to a local file only, no network I/O.
   G1: a steward not a sovereign; G2: the fund GIVES, never INVESTS."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [tanemaki.methods.analyze :as analyze]
             [tanemaki.methods.datom-emit :as de]
             [tanemaki.methods.kotoba :as k]

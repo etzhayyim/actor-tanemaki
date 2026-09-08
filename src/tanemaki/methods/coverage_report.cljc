@@ -13,7 +13,7 @@
   Coverage of the world's organizations is bounded by design (G5).
 
   Pure fns; reuses tanemaki.methods.analyze for the loader/analysis. Portable .cljc."
-  (:require [clojure.string :as str]
+  (:require [kotoba.lang.text :as str]
             [tanemaki.methods.analyze :as analyze]))
 
 ;; G2 — the disbursement allowlist (mirrors propose.ALLOWED_INSTRUMENTS + :instrument/allowlist
