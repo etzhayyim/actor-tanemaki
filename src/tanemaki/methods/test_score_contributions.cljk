@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tanemaki 種蒔き — tests for score-contributions (the DD fit decomposition).
-;; Run:  bb --classpath 20-actors 20-actors/tanemaki/methods/test_score_contributions.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/tanemaki/methods/test_score_contributions.cljc
 (ns tanemaki.methods.test-score-contributions
   "Tests for score-contributions — decomposing a candidate's dd-fit into per-criterion contributions
   (weight × min(1, evidence)), so a voter sees WHICH criteria drove the score. Advisory transparency
