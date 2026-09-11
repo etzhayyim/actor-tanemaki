@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tanemaki 種蒔き — autonomous heartbeat: load the stewardship graph → append GROUND datoms.
 (ns tanemaki.methods.autorun
   "autorun.cljc — tanemaki 種蒔き deterministic heartbeat (ADR-2606122001, inochi/tate pattern).

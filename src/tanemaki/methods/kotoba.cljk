@@ -1,4 +1,4 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tanemaki 種蒔き — grant-stewardship graph DATOM-LOG writer (content-addressed commit-DAG).
 (ns tanemaki.methods.kotoba
   "kotoba.cljc — tanemaki 種蒔き append-only STEWARDSHIP LEDGER writer

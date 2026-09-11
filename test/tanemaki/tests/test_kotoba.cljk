@@ -1,6 +1,6 @@
-#!/usr/bin/env bb
+#!/usr/bin/env kbb
 ;; tanemaki 種蒔き — stewardship-ledger persistence + heartbeat tests.
-;; Run:  bb --classpath 20-actors 20-actors/tanemaki/tests/test_kotoba.cljc
+;; Run:  kbb --classpath 20-actors 20-actors/tanemaki/tests/test_kotoba.cljc
 (ns tanemaki.tests.test-kotoba
   (:require [tanemaki.methods.kotoba :as k]
             [tanemaki.methods.autorun :as auto]
