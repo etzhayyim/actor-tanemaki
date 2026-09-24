@@ -11,7 +11,7 @@
   (verified against /opt/homebrew/bin/ipfs + shasum at authoring time). The module had no dedicated
   test (only exercised incidentally by test_propose). A drift in either silently breaks a voter's
   ability to verify a grant scorecard."
-  (:require [tanemaki.methods.cid :as cid]
+  (:require [kotoba.bytes :as kbytes] [tanemaki.methods.cid :as cid]
             [kotoba.lang.text :as str]
             [kotoba.test :refer [deftest is run-tests]]))
 
@@ -38,7 +38,7 @@
   (let [bs (cid/utf8-bytes "螺旋")]
     (is (= 6 (count bs)))
     (is (every? #(<= 0 % 255) bs))
-    (is (= (map #(bit-and % 0xff) (.getBytes "螺旋" "UTF-8")) (seq bs)))))
+    (is (= (map #(bit-and % 0xff) (kbytes/utf8-bytes "螺旋")) (seq bs)))))
 
 (deftest cid-has-the-cidv1-raw-sha256-shape
   (let [c (cid-of "hello")]

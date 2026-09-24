@@ -20,7 +20,7 @@
   are ported 1:1."
   (:require [kotoba.test :refer [deftest is testing run-tests]]
             [kotoba.lang.text :as str]
-            [clojure.set]
+            [kotoba.lang.coll]
             [kotoba.io :as io]
             [tanemaki.methods.analyze :as analyze]))
 
@@ -34,7 +34,7 @@
     (is (and (>= (count nodes) 30) (>= (count edges) 60))
         (str (count nodes) " nodes / " (count edges) " 縁"))
     (let [kinds (set (map #(get % ":fs/kind") (vals nodes)))]
-      (is (clojure.set/subset?
+      (is (kotoba.lang.coll/subset?
            #{":org" ":screen" ":criterion" ":source" ":instrument" ":milestone"} kinds)))
     (doseq [e edges]
       (is (and (contains? nodes (get e ":en/from")) (contains? nodes (get e ":en/to")))
