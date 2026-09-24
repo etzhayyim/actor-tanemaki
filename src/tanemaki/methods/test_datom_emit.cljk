@@ -6,7 +6,7 @@
     - the Datom log emits ground datoms (incl. the PUBLIC :screened DD trail + disclosed rubric
       weights) and flags every derived readout :derived / :bond/is-transient (G3/G4)
     - emit is deterministic (repeat-emit on a re-loaded seed is byte-identical)"
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [kotoba.lang.text :as str]
             [kotoba.io :as io]
             [tanemaki.methods.analyze :as analyze]

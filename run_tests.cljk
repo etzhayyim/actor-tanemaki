@@ -1,4 +1,4 @@
-(require '[clojure.test :as t])
+(require '[kotoba.test :as t])
 (def suites '[tanemaki.methods.test-cid tanemaki.methods.test-datom-emit
  tanemaki.methods.test-score-contributions tanemaki.tests.test-analyze
  tanemaki.tests.test-coverage tanemaki.tests.test-kotoba tanemaki.tests.test-propose

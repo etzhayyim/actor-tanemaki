@@ -10,7 +10,7 @@
   ensure_ascii=False ⇒ raw UTF-8) and re-parsed for the assertions, mirroring `json.loads(...)`.
 
   The __main__ runner is intentionally omitted."
-  (:require [clojure.test :refer [deftest is run-tests]]
+  (:require [kotoba.test :refer [deftest is run-tests]]
             [kotoba.lang.text :as str]
             [kotoba.io :as io]
             [cheshire.core :as json]

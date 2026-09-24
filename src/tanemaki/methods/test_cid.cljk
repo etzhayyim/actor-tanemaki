@@ -13,7 +13,7 @@
   ability to verify a grant scorecard."
   (:require [tanemaki.methods.cid :as cid]
             [kotoba.lang.text :as str]
-            [clojure.test :refer [deftest is run-tests]]))
+            [kotoba.test :refer [deftest is run-tests]]))
 
 (defn- cid-of [s] (cid/cidv1-raw (cid/utf8-bytes s)))
 (defn- sha-of [s] (cid/sha256-hex (cid/utf8-bytes s)))

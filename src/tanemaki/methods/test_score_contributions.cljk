@@ -6,7 +6,7 @@
   (weight × min(1, evidence)), so a voter sees WHICH criteria drove the score. Advisory transparency
   over disclosed weights + evidence (G4), never a verdict (G3) or the decision (G1)."
   (:require [tanemaki.methods.analyze :as a]
-            [clojure.test :refer [deftest is run-tests]]))
+            [kotoba.test :refer [deftest is run-tests]]))
 
 ;; a small rubric: C1 mission-fit (weight 0.5), C2 openness (0.3), C3 capacity (0.2)
 (def ^:private crit
