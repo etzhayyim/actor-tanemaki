@@ -6,18 +6,18 @@
   so anyone can re-derive a published scorecard's CID and confirm the bytes (G4).
   Inputs are BYTE SEQUENCES (vectors/seqs of 0..255 ints), e.g. (utf8-bytes text).
   Public surface (utf8-bytes / cidv1-raw / sha256-hex / SINGLE-BLOCK-LIMIT) unchanged."
-  (:require [multiformats.core :as mf]))
+  (:require [kotoba.bytes :as kbytes] [multiformats.core :as mf]))
 
 #?(:clj
    (defn- ->ba ^bytes [data]
-     (cond (string? data) (.getBytes ^String data "UTF-8")
+     (cond (string? data) (kbytes/utf8-bytes ^String data)
            (bytes? data)  data
            :else (byte-array (map #(unchecked-byte (bit-and (int %) 0xff)) data)))))
 
 (defn utf8-bytes
   "String → seq of unsigned bytes (0..255)."
   [^String s]
-  #?(:clj (map #(bit-and % 0xff) (.getBytes s "UTF-8"))
+  #?(:clj (map #(bit-and % 0xff) (kbytes/utf8-bytes s))
      :default (throw (ex-info "bind a utf-8 encoder on this host" {}))))
 
 (defn cidv1-raw

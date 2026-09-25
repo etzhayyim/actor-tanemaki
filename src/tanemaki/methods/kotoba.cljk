@@ -24,7 +24,7 @@
   PUBLIC DD scorecard trail; every grant is decided by 1 SBT = 1 vote, never by this ledger.
   G2: the fund GIVES, never INVESTS — equity/debt/convertible instruments are unrepresentable."
   (:require [kotoba.bytes :as kbytes] [kotoba.lang.text :as str]
-            #?(:clj [clojure.java.io :as io])))
+            #?(:clj [kotoba.io :as io])))
 
 (defn add [entity attr value] [":db/add" entity attr value])
 
@@ -131,8 +131,8 @@
    (do
      (defn append-tx [tx log-path]
        (let [f (io/file log-path)]
-         (when-let [p (.getParentFile f)] (.mkdirs p))
-         (when-not (.exists f)
+         (when-let [p (io/parent-file f)] (io/mkdirs p))
+         (when-not (io/exists? f)
            (spit f (str ";; tanemaki 種蒔き — STEWARDSHIP LEDGER (append-only, content-addressed EAVT "
                         "commit-DAG of the PUBLIC grant-DD screen/criterion/org/instrument graph). Generated; "
                         "DO NOT hand-edit. A steward's PUBLIC scorecard trail — never a decision (1 SBT = 1 "
@@ -142,7 +142,7 @@
 
      (defn read-log [log-path]
        (let [f (io/file log-path)]
-         (if-not (.exists f) []
+         (if-not (io/exists? f) []
                  (->> (str/split-lines (slurp f))
                       (map str/trim)
                       (remove #(or (empty? %) (str/starts-with? % ";")))
